@@ -9,10 +9,6 @@ angular
                 templateUrl: "partials/login.html",
                 controller: "LoginCtrl"
             })
-            .when('/register',{
-                templateUrl: 'partials/registration.html',
-                controller: 'RegisterCtrl'
-            })
             .when('/newNote',{
                 templateUrl: 'partials/newNote.html',
                 controller: 'NewNoteCtrl'
@@ -23,11 +19,11 @@ angular
             })
             .otherwise('/')
     })
-    .run(FBCreds =>{
+    .run(FBCreds => {
         let creds = FBCreds;
         let authConfig = {
-            apiKey : creds.key,
-            authDomain : creds.authDomain
+          apiKey: creds.key,
+          authDomain: creds.authDomain
         };
         firebase.initializeApp(authConfig);
-    })
+      });

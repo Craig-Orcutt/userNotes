@@ -8,18 +8,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
     <title>User Notes</title>
 </head>
-<body>
+<body ng-app="userNote">
+    
+    <div ng-view></div>
     
 
 
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="app.js"></script>
+    <script src="FBCreds.js"></script>
+
     <!-- Factories -->
-    <script src="factory/fbFactory.js"></script>
-    <script src="factory/authFactory.js"></script>
+    <script src="factory/FBFactory.js"></script>
+    <script src="factory/AuthFactory.js"></script>
     <!-- controllers -->
-    <script src="controllers/loginCtrl.js"></script>
-    <script src="controllers/newNoteCtrl.js"></script>
-    <script src="controllers/noteListCtrl.js"></script>
-    <script src="controllers/registerCtrl.js"></script>
+    <script src="controllers/LoginCtrl.js"></script>
+    <script src="controllers/NewNoteCtrl.js"></script>
+    <script src="controllers/NoteListCtrl.js"></script>
+
 </body>
 </html>
