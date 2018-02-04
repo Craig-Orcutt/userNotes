@@ -4,7 +4,7 @@ angular
 .module('userNote')
 .controller('NewNoteCtrl', function($scope, $location, FBFactory){
     $scope.newNote = {
-        detail : ''
+        detail : '',
     };
 
     $scope.saveNote = () =>{
